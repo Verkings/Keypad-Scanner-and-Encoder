@@ -1,0 +1,67 @@
+Chronologic VCS simulator copyright 1991-2008
+Contains Synopsys proprietary information.
+Compiler version A-2008.09; Runtime version A-2008.09;  Jul  2 08:01 2014
+
+time=0                   0 row=01111 col=0xxxx data=0x v=0x reset=00
+time=0                   5 row=01111 col=00000 data=0x v=00 reset=00
+time=0                  10 row=01110 col=00000 data=0x v=00 reset=01
+time=0                  25 row=01111 col=00000 data=0x v=00 reset=01
+time=0                  30 row=01110 col=00000 data=0x v=00 reset=01
+time=0                  45 row=01110 col=01110 data=00 v=01 reset=01
+time=0                  50 row=01111 col=01110 data=00 v=01 reset=01
+time=0                  55 row=01111 col=01110 data=0x v=00 reset=01
+time=0                  75 row=01110 col=01110 data=0x v=00 reset=01
+time=0                  85 row=01110 col=01110 data=00 v=01 reset=01
+time=0                  95 row=01111 col=01101 data=01 v=01 reset=01
+time=0                 105 row=01111 col=01101 data=01 v=00 reset=01
+time=0                 130 row=01110 col=01101 data=01 v=00 reset=01
+time=0                 145 row=01110 col=01101 data=01 v=01 reset=01
+time=0                 165 row=01110 col=01101 data=01 v=00 reset=01
+time=0                 170 row=01111 col=01101 data=01 v=00 reset=01
+time=0                 175 row=01101 col=01101 data=01 v=00 reset=01
+time=0                 200 row=01111 col=01101 data=01 v=00 reset=01
+time=0                 215 row=01101 col=01101 data=01 v=00 reset=01
+time=0                 235 row=01111 col=01110 data=04 v=01 reset=01
+time=0                 245 row=01111 col=01110 data=04 v=00 reset=01
+time=0                 260 row=01101 col=01110 data=04 v=00 reset=01
+time=0                 275 row=01101 col=01110 data=04 v=01 reset=01
+time=0                 285 row=01101 col=01101 data=05 v=01 reset=01
+time=0                 295 row=01101 col=01101 data=05 v=00 reset=01
+time=0                 300 row=01111 col=01101 data=05 v=00 reset=01
+time=0                 335 row=01101 col=01101 data=05 v=00 reset=01
+time=0                 345 row=01101 col=01110 data=04 v=01 reset=01
+time=0                 355 row=01111 col=01101 data=05 v=01 reset=01
+time=0                 360 row=01011 col=01101 data=05 v=01 reset=01
+time=0                 365 row=01011 col=01101 data=05 v=00 reset=01
+time=0                 380 row=01111 col=01101 data=05 v=00 reset=01
+time=0                 385 row=01111 col=01110 data=08 v=01 reset=01
+time=0                 395 row=01011 col=01110 data=08 v=00 reset=01
+time=0                 415 row=01011 col=01110 data=08 v=01 reset=01
+time=0                 425 row=01011 col=01110 data=08 v=00 reset=01
+time=0                 445 row=01111 col=01110 data=08 v=00 reset=01
+time=0                 475 row=01011 col=01110 data=08 v=00 reset=01
+time=0                 485 row=01011 col=01110 data=08 v=01 reset=01
+time=0                 495 row=01111 col=01101 data=09 v=01 reset=01
+time=0                 505 row=01111 col=01101 data=09 v=00 reset=01
+time=0                 535 row=01011 col=01101 data=09 v=00 reset=01
+time=0                 545 row=01011 col=01101 data=09 v=01 reset=01
+time=0                 555 row=01111 col=01101 data=09 v=01 reset=01
+time=0                 565 row=00111 col=01101 data=09 v=00 reset=01
+time=0                 570 row=01111 col=01101 data=09 v=00 reset=01
+time=0                 595 row=00111 col=01101 data=09 v=00 reset=01
+time=0                 605 row=00111 col=01101 data=0d v=01 reset=01
+time=0                 615 row=00111 col=01110 data=0c v=01 reset=01
+time=0                 625 row=00111 col=01110 data=0c v=00 reset=01
+time=0                 645 row=01111 col=01110 data=0c v=00 reset=01
+time=0                 675 row=00111 col=01110 data=0c v=00 reset=01
+time=0                 685 row=00111 col=01110 data=0c v=01 reset=01
+time=0                 695 row=01111 col=01101 data=0d v=01 reset=01
+time=0                 705 row=01111 col=01101 data=0d v=00 reset=01
+time=0                 735 row=00111 col=01101 data=0d v=00 reset=01
+time=0                 745 row=00111 col=01101 data=0d v=01 reset=01
+$finish called from file "keypad_test.v", line 67.
+$finish at simulation time                75000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 750000 ps
+CPU Time:      0.010 seconds;       Data structure size:   0.0Mb
+Wed Jul  2 08:01:11 2014

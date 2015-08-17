@@ -1,0 +1,21 @@
+Chronologic VCS simulator copyright 1991-2008
+Contains Synopsys proprietary information.
+Compiler version A-2008.09; Runtime version A-2008.09;  Jul  2 03:30 2014
+
+xxxxxxxx, xxxx,
+time=0 rd_enable=0 BCD=xx
+time=20 rd_enable=1 BCD=xx
+time=25 rd_enable=1 BCD=2
+time=30 rd_enable=0 BCD=2
+time=60 rd_enable=1 BCD=2
+time=65 rd_enable=1 BCD=9
+time=75 rd_enable=1 BCD=11
+time=85 rd_enable=1 BCD=13
+time=95 rd_enable=1 BCD=11
+time=105 rd_enable=1 BCD=13
+$finish called from file "decoder_test.v", line 44.
+$finish at simulation time                30000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 300000 ps
+CPU Time:      0.010 seconds;       Data structure size:   0.0Mb
+Wed Jul  2 03:30:12 2014

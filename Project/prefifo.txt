@@ -1,0 +1,118 @@
+Chronologic VCS simulator copyright 1991-2008
+Contains Synopsys proprietary information.
+Compiler version A-2008.09; Runtime version A-2008.09;  Jul  2 02:56 2014
+
+time=0                   0 full=00 empty=01 data=x rd_enable=01 wr_enable=00 reset=00
+time=0                  10 full=00 empty=01 data=0 rd_enable=00 wr_enable=01 reset=00
+time=0                  20 full=00 empty=01 data=1 rd_enable=00 wr_enable=01 reset=01
+mem[          0] =0001
+time=0                  25 full=00 empty=00 data=1 rd_enable=00 wr_enable=01 reset=01
+time=0                  30 full=00 empty=00 data=2 rd_enable=00 wr_enable=01 reset=01
+mem[          1] =0010
+time=0                  40 full=00 empty=00 data=3 rd_enable=00 wr_enable=01 reset=01
+mem[          2] =0011
+time=0                  50 full=00 empty=00 data=4 rd_enable=00 wr_enable=01 reset=01
+mem[          3] =0100
+time=0                  60 full=00 empty=00 data=5 rd_enable=00 wr_enable=01 reset=01
+mem[          4] =0101
+time=0                  70 full=00 empty=00 data=6 rd_enable=00 wr_enable=01 reset=01
+mem[          5] =0110
+time=0                  80 full=00 empty=00 data=7 rd_enable=00 wr_enable=01 reset=01
+mem[          6] =0111
+time=0                  90 full=00 empty=00 data=8 rd_enable=00 wr_enable=01 reset=01
+mem[          7] =1000
+time=0                 100 full=00 empty=00 data=9 rd_enable=00 wr_enable=01 reset=01
+mem[          8] =1001
+time=0                 110 full=00 empty=00 data=a rd_enable=00 wr_enable=01 reset=01
+mem[          9] =1010
+time=0                 120 full=00 empty=00 data=b rd_enable=00 wr_enable=01 reset=01
+mem[         10] =1011
+time=0                 130 full=00 empty=00 data=c rd_enable=00 wr_enable=01 reset=01
+mem[         11] =1100
+time=0                 140 full=00 empty=00 data=d rd_enable=00 wr_enable=01 reset=01
+mem[         12] =1101
+time=0                 150 full=00 empty=00 data=e rd_enable=00 wr_enable=01 reset=01
+mem[         13] =1110
+time=0                 160 full=00 empty=00 data=f rd_enable=00 wr_enable=01 reset=01
+mem[         14] =1111
+time=0                 170 full=00 empty=00 data=0 rd_enable=00 wr_enable=01 reset=01
+mem[         15] =0000
+time=0                 180 full=00 empty=00 data=1 rd_enable=00 wr_enable=01 reset=01
+mem[         16] =0001
+time=0                 190 full=00 empty=00 data=2 rd_enable=00 wr_enable=01 reset=01
+mem[         17] =0010
+time=0                 200 full=00 empty=00 data=3 rd_enable=00 wr_enable=01 reset=01
+mem[         18] =0011
+time=0                 210 full=00 empty=00 data=4 rd_enable=00 wr_enable=01 reset=01
+mem[         19] =0100
+time=0                 220 full=00 empty=00 data=5 rd_enable=00 wr_enable=01 reset=01
+mem[         20] =0101
+time=0                 230 full=00 empty=00 data=6 rd_enable=00 wr_enable=01 reset=01
+mem[         21] =0110
+time=0                 240 full=00 empty=00 data=7 rd_enable=00 wr_enable=01 reset=01
+mem[         22] =0111
+time=0                 250 full=00 empty=00 data=8 rd_enable=00 wr_enable=01 reset=01
+mem[         23] =1000
+time=0                 260 full=00 empty=00 data=9 rd_enable=00 wr_enable=01 reset=01
+mem[         24] =1001
+time=0                 270 full=00 empty=00 data=a rd_enable=00 wr_enable=01 reset=01
+mem[         25] =1010
+time=0                 280 full=00 empty=00 data=b rd_enable=00 wr_enable=01 reset=01
+mem[         26] =1011
+time=0                 290 full=00 empty=00 data=c rd_enable=00 wr_enable=01 reset=01
+mem[         27] =1100
+time=0                 300 full=00 empty=00 data=d rd_enable=00 wr_enable=01 reset=01
+mem[         28] =1101
+time=0                 310 full=00 empty=00 data=e rd_enable=00 wr_enable=01 reset=01
+mem[         29] =1110
+time=0                 320 full=00 empty=00 data=f rd_enable=00 wr_enable=01 reset=01
+mem[         30] =1111
+time=0                 330 full=00 empty=00 data=0 rd_enable=00 wr_enable=01 reset=01
+mem[         31] =0000
+time=0                 340 full=00 empty=00 data=1 rd_enable=00 wr_enable=01 reset=01
+time=0                 345 full=01 empty=00 data=1 rd_enable=00 wr_enable=01 reset=01
+time=0                 350 full=01 empty=00 data=f rd_enable=00 wr_enable=01 reset=01
+time=0                 360 full=01 empty=00 data=e rd_enable=00 wr_enable=01 reset=01
+time=0                 370 full=01 empty=00 data=d rd_enable=00 wr_enable=01 reset=01
+time=0                 380 full=01 empty=00 data=d rd_enable=00 wr_enable=00 reset=01
+time=0                 400 full=01 empty=00 data=d rd_enable=01 wr_enable=00 reset=01
+code =0101
+time=0                 405 full=00 empty=00 data=d rd_enable=01 wr_enable=00 reset=01
+code =0110
+code =0111
+code =1000
+code =1001
+code =1010
+code =1011
+code =1100
+code =1101
+code =1110
+code =1111
+code =0000
+code =0001
+code =0010
+code =0011
+code =0100
+code =0101
+code =0110
+code =0111
+code =1000
+code =1001
+code =1010
+code =1011
+code =1100
+code =1101
+code =1110
+code =1111
+code =0000
+code =0001
+code =1111
+code =1110
+code =1101
+time=0                 725 full=00 empty=01 data=d rd_enable=01 wr_enable=00 reset=01
+$finish called from file "fifo_test.v", line 79.
+$finish at simulation time                90000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 900000 ps
+CPU Time:      0.010 seconds;       Data structure size:   0.0Mb
+Wed Jul  2 02:56:16 2014

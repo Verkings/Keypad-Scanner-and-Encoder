@@ -1,0 +1,896 @@
+$date
+	Wed Jul  2 07:03:53 2014
+$end
+
+$version
+	Synopsys VCS version A-2008.09
+$end
+
+$timescale
+	10ps
+$end
+
+$comment Csum: 1 8fac7c910f67b583 $end
+
+
+$scope module controller_tb $end
+$var reg 1 ! v $end
+$var reg 1 " clock $end
+$var reg 1 # reset $end
+$var reg 1 $ full $end
+$var reg 1 % empty $end
+$var reg 1 & read $end
+$var wire 1 ' wr_enable $end
+$var wire 1 ( rd_enable $end
+$var wire 1 ) valid $end
+
+$scope module uut $end
+$var wire 1 * v $end
+$var wire 1 " clock $end
+$var wire 1 # reset $end
+$var wire 1 $ full $end
+$var wire 1 + empty $end
+$var wire 1 , read $end
+$var wire 1 ) valid $end
+$var wire 1 ' wr_enable $end
+$var wire 1 ( rd_enable $end
+$var wire 1 - N0 $end
+$var wire 1 . N1 $end
+$var wire 1 / N2 $end
+$var wire 1 0 N3 $end
+$var wire 1 1 N4 $end
+$var wire 1 2 N5 $end
+$var wire 1 3 N6 $end
+$var wire 1 4 N7 $end
+$var wire 1 5 N8 $end
+$var wire 1 2 N9 $end
+$var wire 1 6 N10 $end
+$var wire 1 7 N11 $end
+$var wire 1 8 N12 $end
+$var wire 1 9 N13 $end
+$var wire 1 : N14 $end
+$var wire 1 ; N15 $end
+$var wire 1 < N16 $end
+$var wire 1 = N17 $end
+$var wire 1 > N18 $end
+$var wire 1 ? N19 $end
+$var wire 1 @ N21 $end
+$var wire 1 A n1 $end
+$var wire 1 B n2 $end
+$var wire 1 C n3 $end
+$var wire 1 D n4 $end
+$var wire 1 E n5 $end
+
+$scope module I_7 $end
+$var wire 1 : Z $end
+$var wire 1 9 A $end
+$upscope $end
+
+
+$scope module I_6 $end
+$var wire 1 7 Z $end
+$var wire 1 6 A $end
+$upscope $end
+
+
+$scope module I_5 $end
+$var wire 1 5 Z $end
+$var wire 1 E A $end
+$upscope $end
+
+
+$scope module I_4 $end
+$var wire 1 4 Z $end
+$var wire 1 3 A $end
+$upscope $end
+
+
+$scope module I_3 $end
+$var wire 1 1 Z $end
+$var wire 1 * A $end
+$upscope $end
+
+
+$scope module I_2 $end
+$var wire 1 0 Z $end
+$var wire 1 / A $end
+$upscope $end
+
+
+$scope module I_1 $end
+$var wire 1 - Z $end
+$var wire 1 , A $end
+$upscope $end
+
+
+$scope module C77 $end
+$var wire 1 F Z $end
+$var wire 1 4 A $end
+$var wire 1 7 B $end
+$var wire 1 > C $end
+$upscope $end
+
+
+$scope module C70 $end
+$var wire 1 ? Z $end
+$var wire 1 0 A $end
+$var wire 1 : B $end
+$var wire 1 C C $end
+$upscope $end
+
+
+$scope module C32 $end
+$var wire 1 ; Z $end
+$var wire 1 * A $end
+$var wire 1 , B $end
+$upscope $end
+
+
+$scope module C30 $end
+$var wire 1 9 Z $end
+$var wire 1 8 A $end
+$var wire 1 E B $end
+$upscope $end
+
+
+$scope module C29 $end
+$var wire 1 8 Z $end
+$var wire 1 1 A $end
+$var wire 1 - B $end
+$upscope $end
+
+
+$scope module C25 $end
+$var wire 1 6 Z $end
+$var wire 1 2 A $end
+$var wire 1 5 B $end
+$upscope $end
+
+
+$scope module C24 $end
+$var wire 1 2 Z $end
+$var wire 1 1 A $end
+$var wire 1 , B $end
+$upscope $end
+
+
+$scope module C20 $end
+$var wire 1 3 Z $end
+$var wire 1 2 A $end
+$var wire 1 E B $end
+$upscope $end
+
+
+$scope module C19 $end
+$var wire 1 2 Z $end
+$var wire 1 1 A $end
+$var wire 1 , B $end
+$upscope $end
+
+
+$scope module C11 $end
+$var wire 1 / Z $end
+$var wire 1 . A $end
+$var wire 1 E B $end
+$upscope $end
+
+
+$scope module C10 $end
+$var wire 1 . Z $end
+$var wire 1 * A $end
+$var wire 1 - B $end
+$upscope $end
+
+
+$scope module valid_reg $end
+$var wire 1 @ D $end
+$var wire 1 " CP $end
+$var wire 1 # SD $end
+$var wire 1 ) Q $end
+$var wire 1 G D_IN $end
+$var wire 1 H CP_IN $end
+$var wire 1 I SD_IN $end
+$var supply0 1 J NC_0 $end
+
+$scope module tsbCFD4QXL_1 $end
+$var wire 1 K Q $end
+$var wire 1 G D $end
+$var wire 1 H CP $end
+$var wire 1 I SD $end
+$var reg 1 L NOTIFIER $end
+$var wire 1 M DL $end
+$var wire 1 N SD_D_high $end
+$var wire 1 M cons_1 $end
+$var wire 1 O SD_D_low $end
+$var wire 1 O DL_SD_high $end
+$var wire 1 P cons_2 $end
+$var wire 1 Q DL_SD_low $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module wr_enable_reg $end
+$var wire 1 A D $end
+$var wire 1 R CP $end
+$var wire 1 S CD $end
+$var wire 1 ' Q $end
+$var wire 1 A D_IN $end
+$var wire 1 R CP_IN $end
+$var wire 1 S CD_IN $end
+$var supply0 1 T NC_0 $end
+
+$scope module tsbCFD2QXL_1 $end
+$var wire 1 ' Q $end
+$var wire 1 A D $end
+$var wire 1 R CP $end
+$var wire 1 S CD $end
+$var reg 1 U NOTIFIER $end
+$var wire 1 V CD_D_high $end
+$var wire 1 W cons_1 $end
+$var wire 1 X CD_D_low $end
+$var wire 1 V D_CD_high $end
+$var wire 1 Y cons_2 $end
+$var wire 1 Z D_CD_low $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module rd_enable_reg $end
+$var wire 1 ? D $end
+$var wire 1 R CP $end
+$var wire 1 S CD $end
+$var wire 1 ( Q $end
+$var wire 1 ? D_IN $end
+$var wire 1 R CP_IN $end
+$var wire 1 S CD_IN $end
+$var supply0 1 [ NC_0 $end
+
+$scope module tsbCFD2QXL_1 $end
+$var wire 1 ( Q $end
+$var wire 1 ? D $end
+$var wire 1 R CP $end
+$var wire 1 S CD $end
+$var reg 1 \ NOTIFIER $end
+$var wire 1 ] CD_D_high $end
+$var wire 1 ^ cons_1 $end
+$var wire 1 _ CD_D_low $end
+$var wire 1 ] D_CD_high $end
+$var wire 1 ` cons_2 $end
+$var wire 1 a D_CD_low $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module U3 $end
+$var wire 1 b Z $end
+$var wire 1 = A $end
+$var wire 1 5 B $end
+$upscope $end
+
+
+$scope module U4 $end
+$var wire 1 B Z $end
+$var wire 1 * A $end
+$upscope $end
+
+
+$scope module U5 $end
+$var wire 1 A Z $end
+$var wire 1 B A $end
+$upscope $end
+
+
+$scope module U6 $end
+$var wire 1 C Z $end
+$var wire 1 < A $end
+$upscope $end
+
+
+$scope module U7 $end
+$var wire 1 c Z $end
+$var wire 1 ; A $end
+$var wire 1 E B $end
+$upscope $end
+
+
+$scope module U8 $end
+$var wire 1 E Z $end
+$var wire 1 D A $end
+$upscope $end
+
+
+$scope module U9 $end
+$var wire 1 D Z $end
+$var wire 1 + A $end
+$upscope $end
+
+
+$scope module U10 $end
+$var wire 1 = Z $end
+$var wire 1 1 A $end
+$var wire 1 - B $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+x;
+xF
+0H
+xM
+xQ
+xG
+x<
+x>
+x@
+0J
+xL
+0N
+0O
+0I
+x=
+xb
+xC
+xc
+0"
+1P
+0%
+0$
+0&
+0#
+xK
+0!
+x)
+x8
+xE
+x9
+x1
+x-
+x2
+x5
+x6
+0,
+x3
+x.
+x/
+0*
+xA
+x'
+x?
+x(
+xB
+0+
+x0
+x4
+x7
+x:
+xD
+0V
+0X
+xZ
+0T
+xU
+xW
+1Y
+0R
+0S
+0]
+0_
+xa
+0[
+x\
+x^
+1`
+$end
+#10
+1-
+11
+#14
+1D
+#17
+0;
+#23
+0E
+#30
+1.
+18
+#31
+12
+#33
+15
+#36
+0c
+0<
+#48
+1=
+#51
+0(
+0'
+19
+1/
+#52
+13
+16
+#57
+1K
+0B
+1)
+#62
+00
+0:
+#63
+07
+04
+#70
+1b
+1>
+#73
+0C
+#77
+0A
+1W
+0Z
+#91
+1F
+1@
+1G
+0M
+0Q
+#104
+0?
+1^
+0a
+#500
+1"
+1R
+1H
+#1000
+1#
+1S
+0Y
+1X
+0`
+1_
+1I
+0P
+0"
+0R
+0H
+1N
+#1500
+1"
+1R
+1H
+#2000
+0"
+0R
+0H
+#2500
+1!
+1*
+1%
+1+
+1&
+1,
+1"
+1R
+1H
+#2511
+0-
+01
+#2514
+0D
+#2520
+1;
+#2522
+1E
+#2533
+05
+#2535
+08
+#2541
+0=
+#2544
+1c
+1<
+#2554
+0b
+0>
+#2563
+1B
+#2581
+1C
+#2583
+1A
+0W
+0X
+1V
+#2585
+0F
+0@
+0G
+1M
+1O
+0N
+#2602
+1?
+0^
+0_
+1]
+#3000
+0"
+0R
+0H
+#3500
+1"
+1R
+1H
+#3562
+0K
+0)
+#3568
+1(
+1'
+#4000
+0"
+0R
+0H
+#4500
+1"
+1R
+1H
+#5000
+0!
+0*
+0"
+0R
+0H
+#5010
+11
+#5017
+0;
+#5024
+0.
+#5031
+18
+#5036
+0c
+0<
+#5057
+0B
+#5073
+0C
+#5077
+0A
+1W
+1X
+0V
+#5104
+0?
+1^
+1_
+0]
+#5500
+1"
+1R
+1H
+#5559
+0(
+0'
+#6000
+0"
+0R
+0H
+#6500
+1"
+1R
+1H
+#7000
+0"
+0R
+0H
+#7500
+0&
+0,
+1"
+1R
+1H
+#7510
+1-
+#7530
+1.
+#7548
+1=
+#8000
+0"
+0R
+0H
+#8500
+1"
+1R
+1H
+#9000
+0"
+0R
+0H
+#9500
+1"
+1R
+1H
+#10000
+0%
+0+
+0"
+0R
+0H
+#10014
+1D
+#10023
+0E
+#10033
+15
+#10055
+1b
+1>
+#10076
+1F
+1@
+1G
+0M
+0O
+1N
+#10500
+1"
+1R
+1H
+#10560
+1K
+1)
+#11000
+0"
+0R
+0H
+#11500
+1"
+1R
+1H
+#12000
+0"
+0R
+0H
+#12500
+1&
+1,
+1"
+1R
+1H
+#12511
+0-
+#12535
+0.
+#12543
+0=
+#12559
+0/
+#12563
+0b
+0>
+#12569
+10
+#12591
+1?
+0^
+0_
+1]
+#12594
+0F
+0@
+0G
+1M
+1O
+0N
+#13000
+0"
+0R
+0H
+#13500
+1"
+1R
+1H
+#13562
+0K
+0)
+#13568
+1(
+#14000
+0"
+0R
+0H
+#14500
+1"
+1R
+1H
+#15000
+0"
+0R
+0H
+#15500
+1"
+1R
+1H
+#16000
+1!
+1*
+1%
+1+
+0"
+0R
+0H
+#16011
+01
+#16014
+0D
+#16020
+1;
+#16021
+1.
+#16022
+1E
+#16033
+05
+#16035
+08
+#16042
+1/
+#16044
+1c
+1<
+#16053
+00
+#16063
+1B
+#16081
+1C
+#16083
+1A
+0W
+0X
+1V
+#16500
+1"
+1R
+1H
+#16568
+1'
+#17000
+0"
+0R
+0H
+#17500
+1"
+1R
+1H
+#18000
+0"
+0R
+0H
+#18500
+0%
+0+
+1"
+1R
+1H
+#18514
+1D
+#18523
+0E
+#18533
+15
+#18543
+0c
+0<
+#18547
+09
+#18557
+1:
+#18580
+0C
+#19000
+0"
+0R
+0H
+#19500
+1"
+1R
+1H
+#20000
+0"
+0R
+0H
+#20500
+1"
+1R
+1H
+#21000
+0"
+0R
+0H
+#21500
+1"
+1R
+1H
+#22000
+0"
+0R
+0H
+#22500
+1"
+1R
+1H
+#23000
+0"
+0R
+0H
+#23500
+1%
+1+
+0&
+0,
+1"
+1R
+1H
+#23510
+1-
+#23514
+0D
+#23518
+0;
+#23522
+1E
+#23524
+02
+#23530
+18
+#23533
+05
+#23542
+19
+#23553
+0:
+#23557
+06
+#23567
+17
+#23587
+0?
+1^
+1_
+0]
+#23589
+1F
+1@
+1G
+0M
+0O
+1N
+#24000
+0"
+0R
+0H
+#24500
+1"
+1R
+1H
+#24559
+0(
+#24560
+1K
+1)

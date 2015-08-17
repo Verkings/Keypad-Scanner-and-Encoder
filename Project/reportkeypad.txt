@@ -1,0 +1,826 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+Initializing gui preferences from file  /home/de/desa9341/.synopsys_dv_prefs.tcl
+set search_path {/export/apps/toshiba/sjsu/synopsys/tc240c/}
+/export/apps/toshiba/sjsu/synopsys/tc240c/
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Warning: Function '=' leaked 1 allocations for 16 bytes. (EQN-21)
+1
+read_verilog ./keypad.v 
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/de/desa9341/Project/271/keypad.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/de/desa9341/Project/271/keypad.v
+Warning:  /home/de/desa9341/Project/271/keypad.v:24: 'row' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 28 in file
+	'/home/de/desa9341/Project/271/keypad.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |     no/auto      |
+|            36            |     no/auto      |
+|            45            |     no/auto      |
+|            54            |     no/auto      |
+|            63            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine keypad line 22 in file
+		'/home/de/desa9341/Project/271/keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      store_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine keypad line 28 in file
+		'/home/de/desa9341/Project/271/keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|       col_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|        v_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   next_state_reg    | Flip-flop |   3   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/de/desa9341/Project/271/keypad.db:keypad'
+Loaded 1 design.
+Current design is 'keypad'.
+keypad
+analyze  -format verilog {./keypad.v}
+Running PRESTO HDLC
+Compiling source file ./keypad.v
+Presto compilation completed successfully.
+1
+elaborate  keypad
+Running PRESTO HDLC
+Warning:  ./keypad.v:24: 'row' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 28 in file
+	'./keypad.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |     no/auto      |
+|            36            |     no/auto      |
+|            45            |     no/auto      |
+|            54            |     no/auto      |
+|            63            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine keypad line 22 in file
+		'./keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      store_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine keypad line 28 in file
+		'./keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|       col_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|        v_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   next_state_reg    | Flip-flop |   3   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/de/desa9341/Project/271/keypad.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'keypad'.
+1
+current_design keypad
+Current design is 'keypad'.
+{keypad}
+check_design 
+1
+create_clock clock -name clock -period 10
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clock
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_dont_touch_network [all_clocks]
+1
+set_load 10 [all_inputs]
+1
+set_load 10 [all_outputs]
+1
+set_fix_hold clock
+1
+compile -incremental_mapping
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             | C-2009.06-DWBB_0912 |          |
+============================================================================
+
+
+Warning: Operating condition WCCOM25 set on design keypad has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'keypad'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     414.0      0.00       0.0       0.0                                0.00
+    0:00:01     380.5      0.00       0.0       0.0                               -3.28
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     380.5      0.00       0.0       0.0                               -3.28
+    0:00:01     401.5      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+report -cell
+report_cell
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : keypad
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:10:06 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+C26                       CAN2X2          tc240c          2.000000  
+C29                       COR2X1          tc240c          1.500000  
+C33                       COR2X1          tc240c          1.500000  
+C38                       COR2X1          tc240c          1.500000  
+C42                       COR2X1          tc240c          1.500000  
+C47                       COR2X1          tc240c          1.500000  
+C74                       COR2X1          tc240c          1.500000  
+C75                       COR2X1          tc240c          1.500000  
+C81                       COR2X1          tc240c          1.500000  
+C82                       COR2X1          tc240c          1.500000  
+C88                       COR2X1          tc240c          1.500000  
+C89                       COR2X1          tc240c          1.500000  
+C95                       COR2X1          tc240c          1.500000  
+C96                       COR2X1          tc240c          1.500000  
+C167                      COR2X1          tc240c          1.500000  
+C168                      COR2X1          tc240c          1.500000  
+C174                      COR2X1          tc240c          1.500000  
+C175                      COR2X1          tc240c          1.500000  
+C181                      COR2X1          tc240c          1.500000  
+C182                      COR2X1          tc240c          1.500000  
+C188                      COR2X1          tc240c          1.500000  
+C189                      COR2X1          tc240c          1.500000  
+C260                      COR2X1          tc240c          1.500000  
+C261                      COR2X1          tc240c          1.500000  
+C267                      COR2X1          tc240c          1.500000  
+C268                      COR2X1          tc240c          1.500000  
+C274                      COR2X1          tc240c          1.500000  
+C275                      COR2X1          tc240c          1.500000  
+C281                      COR2X1          tc240c          1.500000  
+C282                      COR2X1          tc240c          1.500000  
+C353                      COR2X1          tc240c          1.500000  
+C354                      COR2X1          tc240c          1.500000  
+C360                      COR2X1          tc240c          1.500000  
+C361                      COR2X1          tc240c          1.500000  
+C367                      COR2X1          tc240c          1.500000  
+C368                      COR2X1          tc240c          1.500000  
+C374                      COR2X1          tc240c          1.500000  
+C375                      COR2X1          tc240c          1.500000  
+C508                      CAN2X2          tc240c          2.000000  
+C509                      CAN2X2          tc240c          2.000000  
+C510                      CAN2X2          tc240c          2.000000  
+C511                      CAN2X2          tc240c          2.000000  
+C512                      CAN2X2          tc240c          2.000000  
+C513                      CAN2X2          tc240c          2.000000  
+C514                      CAN2X2          tc240c          2.000000  
+C515                      CAN2X2          tc240c          2.000000  
+C516                      CAN2X2          tc240c          2.000000  
+C517                      CAN2X2          tc240c          2.000000  
+C518                      CAN2X2          tc240c          2.000000  
+C519                      CAN2X2          tc240c          2.000000  
+C520                      CAN2X2          tc240c          2.000000  
+C521                      CAN2X2          tc240c          2.000000  
+C522                      CAN2X2          tc240c          2.000000  
+C523                      CAN2X2          tc240c          2.000000  
+C524                      CAN2X2          tc240c          2.000000  
+C525                      CAN2X2          tc240c          2.000000  
+C527                      COR2X1          tc240c          1.500000  
+C530                      COR2X1          tc240c          1.500000  
+C533                      COR2X1          tc240c          1.500000  
+C536                      COR2X1          tc240c          1.500000  
+C539                      COR2X1          tc240c          1.500000  
+C542                      COR2X1          tc240c          1.500000  
+C545                      COR2X1          tc240c          1.500000  
+C548                      COR2X1          tc240c          1.500000  
+C554                      COR2X1          tc240c          1.500000  
+C556                      COR3X1          tc240c          2.000000  
+C564                      COR4X1          tc240c          2.000000  
+C588                      COR4X1          tc240c          2.000000  
+C612                      COR4X1          tc240c          2.000000  
+C636                      COR4X1          tc240c          2.000000  
+I_1                       CIVX2           tc240c          1.000000  
+I_10                      CIVX2           tc240c          1.000000  
+I_11                      CIVX2           tc240c          1.000000  
+I_12                      CIVX2           tc240c          1.000000  
+I_13                      CIVX2           tc240c          1.000000  
+I_14                      CIVX2           tc240c          1.000000  
+I_16                      CIVX2           tc240c          1.000000  
+I_17                      CIVX2           tc240c          1.000000  
+I_18                      CIVX2           tc240c          1.000000  
+I_19                      CIVX2           tc240c          1.000000  
+I_20                      CIVX2           tc240c          1.000000  
+I_21                      CIVX2           tc240c          1.000000  
+I_22                      CIVX2           tc240c          1.000000  
+I_23                      CIVX2           tc240c          1.000000  
+I_25                      CIVX2           tc240c          1.000000  
+I_26                      CIVX2           tc240c          1.000000  
+I_27                      CIVX2           tc240c          1.000000  
+I_28                      CIVX2           tc240c          1.000000  
+I_30                      CIVX2           tc240c          1.000000  
+I_31                      CIVX2           tc240c          1.000000  
+I_32                      CIVX2           tc240c          1.000000  
+I_33                      CIVX2           tc240c          1.000000  
+I_35                      CIVX2           tc240c          1.000000  
+I_36                      CIVX2           tc240c          1.000000  
+I_37                      CIVX2           tc240c          1.000000  
+I_38                      CIVX2           tc240c          1.000000  
+U3                        CIVX2           tc240c          1.000000  
+U4                        CIVX2           tc240c          1.000000  
+U5                        CIVX2           tc240c          1.000000  
+U6                        CIVX2           tc240c          1.000000  
+U7                        CIVX2           tc240c          1.000000  
+U8                        CIVX2           tc240c          1.000000  
+U9                        CIVX2           tc240c          1.000000  
+U10                       CIVX2           tc240c          1.000000  
+U11                       CNR2IX1         tc240c          1.500000  
+U12                       CNR2X1          tc240c          1.000000  
+U13                       CNR2IX1         tc240c          1.500000  
+U14                       CNR2X1          tc240c          1.000000  
+U15                       CNR2IX1         tc240c          1.500000  
+U16                       CNR2X1          tc240c          1.000000  
+U17                       CNR2IX1         tc240c          1.500000  
+U18                       CNR2X1          tc240c          1.000000  
+U19                       COR2X1          tc240c          1.500000  
+U20                       COR2X1          tc240c          1.500000  
+U21                       COR2X1          tc240c          1.500000  
+U22                       COR2X1          tc240c          1.500000  
+U23                       COR2X1          tc240c          1.500000  
+U24                       COR2X1          tc240c          1.500000  
+U25                       COR2X1          tc240c          1.500000  
+U26                       COR2X1          tc240c          1.500000  
+U27                       COR2X1          tc240c          1.500000  
+U28                       COR2X1          tc240c          1.500000  
+U29                       COR2X1          tc240c          1.500000  
+U30                       COR2X1          tc240c          1.500000  
+U31                       CAN3X1          tc240c          2.000000  
+U32                       CND2X1          tc240c          1.000000  
+U33                       COR4X1          tc240c          2.000000  
+U34                       CIVX1           tc240c          1.000000  
+U35                       COND4CX1        tc240c          2.000000  
+U36                       CND2X1          tc240c          1.000000  
+U37                       CANR4CX1        tc240c          2.000000  
+U38                       CIVX1           tc240c          1.000000  
+U39                       CND4X1          tc240c          2.000000  
+U40                       COND1XL         tc240c          1.500000  
+U41                       CIVX1           tc240c          1.000000  
+U42                       CND2X1          tc240c          1.000000  
+U43                       CANR4CX1        tc240c          2.000000  
+U44                       CND3XL          tc240c          1.500000  
+U45                       COND3X1         tc240c          2.000000  
+U46                       COAN1X1         tc240c          2.000000  
+U47                       CIVX1           tc240c          1.000000  
+U48                       COND3X1         tc240c          2.000000  
+U49                       CNR2X1          tc240c          1.000000  
+U50                       CND2X1          tc240c          1.000000  
+U51                       CIVX1           tc240c          1.000000  
+U52                       CND4X1          tc240c          2.000000  
+U53                       CNR2X1          tc240c          1.000000  
+U54                       CND2X1          tc240c          1.000000  
+U55                       CND2X1          tc240c          1.000000  
+U56                       CANR2X1         tc240c          2.000000  
+U57                       CANR2X1         tc240c          2.000000  
+U58                       CND3XL          tc240c          1.500000  
+U59                       CANR2X1         tc240c          2.000000  
+U60                       CND2X1          tc240c          1.000000  
+U61                       CANR2X1         tc240c          2.000000  
+U62                       CND3XL          tc240c          1.500000  
+U63                       CANR2X1         tc240c          2.000000  
+U64                       CND2X1          tc240c          1.000000  
+U65                       CANR2X1         tc240c          2.000000  
+U66                       CND2X1          tc240c          1.000000  
+U67                       CANR2X1         tc240c          2.000000  
+U68                       CND3XL          tc240c          1.500000  
+U69                       CND2X1          tc240c          1.000000  
+U70                       CND3XL          tc240c          1.500000  
+U71                       CND2X1          tc240c          1.000000  
+U72                       CIVX1           tc240c          1.000000  
+U73                       CNR2X1          tc240c          1.000000  
+U74                       CIVX1           tc240c          1.000000  
+U75                       CIVX1           tc240c          1.000000  
+U76                       COND1XL         tc240c          1.500000  
+U77                       CNR2X1          tc240c          1.000000  
+U78                       CNR2X1          tc240c          1.000000  
+U79                       CIVX1           tc240c          1.000000  
+U80                       CNR2X1          tc240c          1.000000  
+U81                       CIVX1           tc240c          1.000000  
+U82                       CANR3X1         tc240c          2.000000  
+U83                       COR2X1          tc240c          1.500000  
+U84                       CAN2X1          tc240c          1.500000  
+U86                       COR2X1          tc240c          1.500000  
+U87                       COR2X1          tc240c          1.500000  
+U88                       COR2X1          tc240c          1.500000  
+U89                       COR2X1          tc240c          1.500000  
+U90                       COR2X1          tc240c          1.500000  
+U91                       COR2X1          tc240c          1.500000  
+U92                       COR2X1          tc240c          1.500000  
+U93                       COR2X1          tc240c          1.500000  
+U94                       CMX2X1          tc240c          2.500000  
+U95                       CMX2X1          tc240c          2.500000  
+U96                       CMX2X1          tc240c          2.500000  
+U97                       CMX2X1          tc240c          2.500000  
+U98                       CMX2X1          tc240c          2.500000  
+U99                       CMX2X1          tc240c          2.500000  
+U100                      CMX2X1          tc240c          2.500000  
+U101                      CMX2X1          tc240c          2.500000  
+U102                      CMX2X1          tc240c          2.500000  
+U103                      CMX2X1          tc240c          2.500000  
+U104                      CMX2X1          tc240c          2.500000  
+U105                      CMX2X1          tc240c          2.500000  
+U106                      CDLY1XL         tc240c          3.500000  
+U107                      CNIVX1          tc240c          1.000000  
+U108                      CDLY1XL         tc240c          3.500000  
+U109                      CNIVX1          tc240c          1.000000  
+U110                      CDLY1XL         tc240c          3.500000  
+U111                      CNIVX1          tc240c          1.000000  
+U112                      CDLY1XL         tc240c          3.500000  
+U113                      CNIVX1          tc240c          1.000000  
+U114                      CNIVX1          tc240c          1.000000  
+U115                      CNIVX1          tc240c          1.000000  
+U116                      CNIVX1          tc240c          1.000000  
+col_reg[0]                CFD1QXL         tc240c          3.500000  n
+col_reg[1]                CFD1QXL         tc240c          3.500000  n
+col_reg[2]                CFD1QXL         tc240c          3.500000  n
+col_reg[3]                CFD1QXL         tc240c          3.500000  n
+data_reg[0]               CFD1XL          tc240c          4.000000  n
+data_reg[1]               CFD1QXL         tc240c          3.500000  n
+data_reg[2]               CFD1QXL         tc240c          3.500000  n
+data_reg[3]               CFD1QXL         tc240c          3.500000  n
+next_state_reg[0]         CFD1QXL         tc240c          3.500000  n
+next_state_reg[1]         CFD1QXL         tc240c          3.500000  n
+next_state_reg[2]         CFD1QXL         tc240c          3.500000  n
+state_reg[0]              CFD2XL          tc240c          5.500000  n
+state_reg[1]              CFD2XL          tc240c          5.500000  n
+state_reg[2]              CFD2XL          tc240c          5.500000  n
+store_reg[0]              CFD3QXL         tc240c          6.000000  n
+store_reg[1]              CFD3QXL         tc240c          6.000000  n
+store_reg[2]              CFD3QXL         tc240c          6.000000  n
+store_reg[3]              CFD3QXL         tc240c          6.000000  n
+v_reg                     CFD1QXL         tc240c          3.500000  n
+--------------------------------------------------------------------------------
+Total 228 cells                                           401.500000
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_path 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : keypad
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:10:06 2014
+****************************************
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: store_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: data_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  store_reg[3]/CP (CFD3QXL)                0.00       0.00 r
+  store_reg[3]/Q (CFD3QXL)                 1.07       1.07 f
+  I_16/Z (CIVX2)                           0.22       1.29 r
+  C353/Z (COR2X1)                          0.20       1.49 r
+  U89/Z (COR2X1)                           0.17       1.66 r
+  I_35/Z (CIVX2)                           0.06       1.72 f
+  C636/Z (COR4X1)                          0.55       2.27 f
+  U56/Z (CANR2X1)                          0.25       2.53 r
+  U52/Z (CND4X1)                           0.45       2.98 f
+  U31/Z (CAN3X1)                           0.45       3.42 f
+  U98/Z (CMX2X1)                           0.26       3.69 f
+  data_reg[0]/D (CFD1XL)                   0.00       3.69 f
+  data arrival time                                   3.69
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  data_reg[0]/CP (CFD1XL)                  0.00       9.75 r
+  library setup time                      -0.48       9.27
+  data required time                                  9.27
+  -----------------------------------------------------------
+  data required time                                  9.27
+  data arrival time                                  -3.69
+  -----------------------------------------------------------
+  slack (MET)                                         5.58
+
+
+  Startpoint: store_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: col_reg[0] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  store_reg[3]/CP (CFD3QXL)                0.00       0.00 r
+  store_reg[3]/Q (CFD3QXL)                 1.07       1.07 f
+  I_16/Z (CIVX2)                           0.22       1.29 r
+  C353/Z (COR2X1)                          0.20       1.49 r
+  U89/Z (COR2X1)                           0.17       1.66 r
+  I_35/Z (CIVX2)                           0.06       1.72 f
+  C636/Z (COR4X1)                          0.55       2.27 f
+  U56/Z (CANR2X1)                          0.25       2.53 r
+  U52/Z (CND4X1)                           0.45       2.98 f
+  U31/Z (CAN3X1)                           0.45       3.42 f
+  U102/Z (CMX2X1)                          0.26       3.69 f
+  col_reg[0]/D (CFD1QXL)                   0.00       3.69 f
+  data arrival time                                   3.69
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  col_reg[0]/CP (CFD1QXL)                  0.00       9.75 r
+  library setup time                      -0.46       9.29
+  data required time                                  9.29
+  -----------------------------------------------------------
+  data required time                                  9.29
+  data arrival time                                  -3.69
+  -----------------------------------------------------------
+  slack (MET)                                         5.60
+
+
+  Startpoint: store_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: col_reg[1] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  store_reg[3]/CP (CFD3QXL)                0.00       0.00 r
+  store_reg[3]/Q (CFD3QXL)                 1.07       1.07 f
+  I_16/Z (CIVX2)                           0.22       1.29 r
+  C353/Z (COR2X1)                          0.20       1.49 r
+  U89/Z (COR2X1)                           0.17       1.66 r
+  I_35/Z (CIVX2)                           0.06       1.72 f
+  C636/Z (COR4X1)                          0.55       2.27 f
+  U56/Z (CANR2X1)                          0.25       2.53 r
+  U52/Z (CND4X1)                           0.45       2.98 f
+  U31/Z (CAN3X1)                           0.45       3.42 f
+  U103/Z (CMX2X1)                          0.26       3.69 f
+  col_reg[1]/D (CFD1QXL)                   0.00       3.69 f
+  data arrival time                                   3.69
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  col_reg[1]/CP (CFD1QXL)                  0.00       9.75 r
+  library setup time                      -0.46       9.29
+  data required time                                  9.29
+  -----------------------------------------------------------
+  data required time                                  9.29
+  data arrival time                                  -3.69
+  -----------------------------------------------------------
+  slack (MET)                                         5.60
+
+
+  Startpoint: store_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: col_reg[2] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  store_reg[3]/CP (CFD3QXL)                0.00       0.00 r
+  store_reg[3]/Q (CFD3QXL)                 1.07       1.07 f
+  I_16/Z (CIVX2)                           0.22       1.29 r
+  C353/Z (COR2X1)                          0.20       1.49 r
+  U89/Z (COR2X1)                           0.17       1.66 r
+  I_35/Z (CIVX2)                           0.06       1.72 f
+  C636/Z (COR4X1)                          0.55       2.27 f
+  U56/Z (CANR2X1)                          0.25       2.53 r
+  U52/Z (CND4X1)                           0.45       2.98 f
+  U31/Z (CAN3X1)                           0.45       3.42 f
+  U104/Z (CMX2X1)                          0.26       3.69 f
+  col_reg[2]/D (CFD1QXL)                   0.00       3.69 f
+  data arrival time                                   3.69
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  col_reg[2]/CP (CFD1QXL)                  0.00       9.75 r
+  library setup time                      -0.46       9.29
+  data required time                                  9.29
+  -----------------------------------------------------------
+  data required time                                  9.29
+  data arrival time                                  -3.69
+  -----------------------------------------------------------
+  slack (MET)                                         5.60
+
+
+  Startpoint: store_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: col_reg[3] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  store_reg[3]/CP (CFD3QXL)                0.00       0.00 r
+  store_reg[3]/Q (CFD3QXL)                 1.07       1.07 f
+  I_16/Z (CIVX2)                           0.22       1.29 r
+  C353/Z (COR2X1)                          0.20       1.49 r
+  U89/Z (COR2X1)                           0.17       1.66 r
+  I_35/Z (CIVX2)                           0.06       1.72 f
+  C636/Z (COR4X1)                          0.55       2.27 f
+  U56/Z (CANR2X1)                          0.25       2.53 r
+  U52/Z (CND4X1)                           0.45       2.98 f
+  U31/Z (CAN3X1)                           0.45       3.42 f
+  U105/Z (CMX2X1)                          0.26       3.69 f
+  col_reg[3]/D (CFD1QXL)                   0.00       3.69 f
+  data arrival time                                   3.69
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  col_reg[3]/CP (CFD1QXL)                  0.00       9.75 r
+  library setup time                      -0.46       9.29
+  data required time                                  9.29
+  -----------------------------------------------------------
+  data required time                                  9.29
+  data arrival time                                  -3.69
+  -----------------------------------------------------------
+  slack (MET)                                         5.60
+
+
+1
+set_max_area 5000
+1
+report_area 
+ 
+****************************************
+Report : area
+Design : keypad
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:10:06 2014
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               15
+Number of nets:               238
+Number of cells:              228
+Number of references:          27
+
+Combinational area:        318.500000
+Noncombinational area:      83.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:           401.500000
+Total area:                 undefined
+1
+report_power
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : keypad
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:10:07 2014
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  = 522.6198 uW   (89%)
+  Net Switching Power  =  65.7427 uW   (11%)
+                         ---------
+Total Dynamic Power    = 588.3625 uW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+1
+write -hierarchy -format verilog -output keypad_netlist.v
+Writing verilog file '/home/de/desa9341/Project/271/keypad_netlist.v'.
+1
+report_qor
+ 
+****************************************
+Report : qor
+Design : keypad
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:10:07 2014
+****************************************
+
+
+  Timing Path Group 'clock'
+  -----------------------------------
+  Levels of Logic:               9.00
+  Critical Path Length:          3.69
+  Critical Path Slack:           5.58
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                228
+  Buf/Inv Cell Count:              55
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      318.500000
+  Noncombinational Area:    83.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:               401.500000
+  Design Area:             401.500000
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           238
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: eecad4.engr.sjsu.edu
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              0.10
+  Logic Optimization:            0.08
+  Mapping Optimization:          0.13
+  -----------------------------------
+  Overall Compile Time:          1.80
+
+1
+quit
+
+Thank you...

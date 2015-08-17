@@ -1,0 +1,566 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+Initializing gui preferences from file  /home/de/desa9341/.synopsys_dv_prefs.tcl
+set search_path {/export/apps/toshiba/sjsu/synopsys/tc240c/}
+/export/apps/toshiba/sjsu/synopsys/tc240c/
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Warning: Function '=' leaked 1 allocations for 16 bytes. (EQN-21)
+1
+read_verilog ./decoder.v 
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/de/desa9341/Project/271/decoder.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/de/desa9341/Project/271/decoder.v
+
+Inferred memory devices in process
+	in routine decoder line 12 in file
+		'/home/de/desa9341/Project/271/decoder.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       BCD_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/de/desa9341/Project/271/decoder.db:decoder'
+Loaded 1 design.
+Current design is 'decoder'.
+decoder
+analyze  -format verilog {./decoder.v}
+Running PRESTO HDLC
+Compiling source file ./decoder.v
+Presto compilation completed successfully.
+1
+elaborate  decoder
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine decoder line 12 in file
+		'./decoder.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       BCD_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/de/desa9341/Project/271/decoder.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'decoder'.
+1
+current_design decoder
+Current design is 'decoder'.
+{decoder}
+check_design 
+1
+create_clock clock -name clock -period 1.5
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clock
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_dont_touch_network [all_clocks]
+1
+set_load 10 [all_inputs]
+1
+set_load 10 [all_outputs]
+1
+set_fix_hold clock
+1
+compile -incremental_mapping
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             | C-2009.06-DWBB_0912 |          |
+============================================================================
+
+
+Warning: Operating condition WCCOM25 set on design decoder has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'decoder'
+Information: The register 'BCD_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'BCD_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'BCD_reg[5]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      47.5      0.00       0.0       0.0                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      47.5      0.00       0.0       0.0                               -3.00
+    0:00:01      78.5      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+report -cell 
+report_cell
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : decoder
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:26:29 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+BCD_reg[0]                CFD1QX1         tc240c          5.000000  n
+BCD_reg[1]                CFD1QX1         tc240c          5.000000  n
+BCD_reg[2]                CFD1QX1         tc240c          5.000000  n
+BCD_reg[3]                CFD1QX1         tc240c          5.000000  n
+BCD_reg[4]                CFD1QX1         tc240c          5.000000  n
+U2                        CAOR2X1         tc240c          2.500000  
+U3                        CAOR2X1         tc240c          2.500000  
+U4                        COND2X1         tc240c          2.000000  
+U5                        COND11X1        tc240c          2.000000  
+U7                        CIVX1           tc240c          1.000000  
+U8                        CIVX1           tc240c          1.000000  
+U10                       CND2X1          tc240c          1.000000  
+U11                       CIVX1           tc240c          1.000000  
+U12                       CND2X1          tc240c          1.000000  
+U13                       CIVX1           tc240c          1.000000  
+U15                       COND3X1         tc240c          2.000000  
+U16                       CIVX1           tc240c          1.000000  
+U20                       CNIVX1          tc240c          1.000000  
+U21                       CNIVX1          tc240c          1.000000  
+U22                       CNIVX1          tc240c          1.000000  
+U23                       CNIVX1          tc240c          1.000000  
+U24                       CNIVX1          tc240c          1.000000  
+U25                       CIVX2           tc240c          1.000000  
+U26                       CIVX2           tc240c          1.000000  
+U27                       CNIVX1          tc240c          1.000000  
+U28                       CNIVX1          tc240c          1.000000  
+U29                       CIVXL           tc240c          1.000000  
+U30                       CIVXL           tc240c          1.000000  
+U31                       CIVX2           tc240c          1.000000  
+U32                       CIVX2           tc240c          1.000000  
+U33                       CNIVX1          tc240c          1.000000  
+U34                       CND2XL          tc240c          1.000000  
+U35                       CNIVX1          tc240c          1.000000  
+U36                       CNIVX1          tc240c          1.000000  
+U37                       CNIVX1          tc240c          1.000000  
+U38                       CIVDXL          tc240c          2.000000  
+U39                       CIVX2           tc240c          1.000000  
+U40                       CIVX2           tc240c          1.000000  
+U41                       COND11X2        tc240c          3.500000  
+U42                       CNIVX1          tc240c          1.000000  
+U43                       CNIVX1          tc240c          1.000000  
+U44                       CNIVX1          tc240c          1.000000  
+U45                       COND1X2         tc240c          3.000000  
+U46                       CNIVX1          tc240c          1.000000  
+U47                       CNIVX1          tc240c          1.000000  
+U48                       CNIVX1          tc240c          1.000000  
+U49                       CNIVX1          tc240c          1.000000  
+--------------------------------------------------------------------------------
+Total 47 cells                                            78.500000
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_path 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : decoder
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:26:29 2014
+****************************************
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: code[3] (input port)
+  Endpoint: BCD_reg[2] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 f
+  code[3] (in)                             0.00       0.00 f
+  U30/Z (CIVXL)                            0.06       0.06 r
+  U29/Z (CIVXL)                            0.17       0.23 f
+  U12/Z (CND2X1)                           0.13       0.36 r
+  U39/Z (CIVX2)                            0.09       0.45 f
+  U40/Z (CIVX2)                            0.07       0.53 r
+  U7/Z (CIVX1)                             0.07       0.60 f
+  U5/Z (COND11X1)                          0.30       0.90 r
+  BCD_reg[2]/D (CFD1QX1)                   0.00       0.90 r
+  data arrival time                                   0.90
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  BCD_reg[2]/CP (CFD1QX1)                  0.00       1.25 r
+  library setup time                      -0.35       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -0.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: BCD_reg[4] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: BCD_reg[4] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  BCD_reg[4]/CP (CFD1QX1)                  0.00       0.00 r
+  BCD_reg[4]/Q (CFD1QX1)                   0.40       0.40 f
+  U16/Z (CIVX1)                            0.09       0.49 r
+  U45/Z (COND1X2)                          0.12       0.61 f
+  U47/Z (CNIVX1)                           0.15       0.75 f
+  U46/Z (CNIVX1)                           0.14       0.89 f
+  BCD_reg[4]/D (CFD1QX1)                   0.00       0.89 f
+  data arrival time                                   0.89
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  BCD_reg[4]/CP (CFD1QX1)                  0.00       1.25 r
+  library setup time                      -0.35       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -0.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: BCD_reg[1] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: BCD_reg[1] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  BCD_reg[1]/CP (CFD1QX1)                  0.00       0.00 r
+  BCD_reg[1]/Q (CFD1QX1)                   0.41       0.41 f
+  U25/Z (CIVX2)                            0.06       0.48 r
+  U26/Z (CIVX2)                            0.05       0.53 f
+  U3/Z (CAOR2X1)                           0.37       0.89 f
+  BCD_reg[1]/D (CFD1QX1)                   0.00       0.89 f
+  data arrival time                                   0.89
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  BCD_reg[1]/CP (CFD1QX1)                  0.00       1.25 r
+  library setup time                      -0.35       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -0.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: rd_enable (input port)
+  Endpoint: BCD_reg[0] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 f
+  rd_enable (in)                           0.00       0.00 f
+  U49/Z (CNIVX1)                           0.15       0.15 f
+  U43/Z (CNIVX1)                           0.20       0.36 f
+  U28/Z (CNIVX1)                           0.17       0.52 f
+  U2/Z (CAOR2X1)                           0.37       0.89 f
+  BCD_reg[0]/D (CFD1QX1)                   0.00       0.89 f
+  data arrival time                                   0.89
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  BCD_reg[0]/CP (CFD1QX1)                  0.00       1.25 r
+  library setup time                      -0.35       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -0.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: code[3] (input port)
+  Endpoint: BCD_reg[3] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 r
+  code[3] (in)                             0.00       0.00 r
+  U30/Z (CIVXL)                            0.04       0.04 f
+  U29/Z (CIVXL)                            0.20       0.24 r
+  U12/Z (CND2X1)                           0.20       0.44 f
+  U39/Z (CIVX2)                            0.07       0.51 r
+  U40/Z (CIVX2)                            0.08       0.59 f
+  U41/Z (COND11X2)                         0.25       0.83 r
+  BCD_reg[3]/D (CFD1QX1)                   0.00       0.83 r
+  data arrival time                                   0.83
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  BCD_reg[3]/CP (CFD1QX1)                  0.00       1.25 r
+  library setup time                      -0.34       0.91
+  data required time                                  0.91
+  -----------------------------------------------------------
+  data required time                                  0.91
+  data arrival time                                  -0.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+1
+set_max_area 5000
+1
+report_area  
+ 
+****************************************
+Report : area
+Design : decoder
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:26:29 2014
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               14
+Number of nets:                56
+Number of cells:               47
+Number of references:          14
+
+Combinational area:         53.500000
+Noncombinational area:      25.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:            78.500000
+Total area:                 undefined
+1
+report_power  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : decoder
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:26:30 2014
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   1.2060 mW   (92%)
+  Net Switching Power  = 108.3676 uW    (8%)
+                         ---------
+Total Dynamic Power    =   1.3143 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+1
+write -hierarchy -format verilog -output decoder_netlist.v
+Writing verilog file '/home/de/desa9341/Project/271/decoder_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+report_qor 
+ 
+****************************************
+Report : qor
+Design : decoder
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 03:26:30 2014
+****************************************
+
+
+  Timing Path Group 'clock'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:          0.90
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      1.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                 47
+  Buf/Inv Cell Count:              32
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:       53.500000
+  Noncombinational Area:    25.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:                78.500000
+  Design Area:              78.500000
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            56
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: eecad4.engr.sjsu.edu
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              0.00
+  Logic Optimization:            0.04
+  Mapping Optimization:          0.25
+  -----------------------------------
+  Overall Compile Time:          1.73
+
+1
+quit
+
+Thank you...

@@ -1,0 +1,23 @@
+Chronologic VCS simulator copyright 1991-2008
+Contains Synopsys proprietary information.
+Compiler version A-2008.09; Runtime version A-2008.09;  Jul  2 07:00 2014
+
+time=0 v=0 reset=0 full=0 empty=0 read=0 valid=1 wr_enable=0 rd_enable=0
+time=10 v=0 reset=1 full=0 empty=0 read=0 valid=1 wr_enable=0 rd_enable=0
+time=25 v=1 reset=1 full=0 empty=1 read=1 valid=0 wr_enable=1 rd_enable=1
+time=50 v=0 reset=1 full=0 empty=1 read=1 valid=0 wr_enable=1 rd_enable=1
+time=55 v=0 reset=1 full=0 empty=1 read=1 valid=0 wr_enable=0 rd_enable=0
+time=75 v=0 reset=1 full=0 empty=1 read=0 valid=0 wr_enable=0 rd_enable=0
+time=100 v=0 reset=1 full=0 empty=0 read=0 valid=0 wr_enable=0 rd_enable=0
+time=105 v=0 reset=1 full=0 empty=0 read=0 valid=1 wr_enable=0 rd_enable=0
+time=125 v=0 reset=1 full=0 empty=0 read=1 valid=0 wr_enable=0 rd_enable=1
+time=160 v=1 reset=1 full=0 empty=1 read=1 valid=0 wr_enable=0 rd_enable=1
+time=165 v=1 reset=1 full=0 empty=1 read=1 valid=0 wr_enable=1 rd_enable=1
+time=185 v=1 reset=1 full=0 empty=0 read=1 valid=0 wr_enable=1 rd_enable=1
+time=235 v=1 reset=1 full=0 empty=1 read=0 valid=1 wr_enable=1 rd_enable=0
+$finish called from file "controller_test.v", line 30.
+$finish at simulation time                25000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 250000 ps
+CPU Time:      0.010 seconds;       Data structure size:   0.0Mb
+Wed Jul  2 07:00:25 2014

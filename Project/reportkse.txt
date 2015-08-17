@@ -1,0 +1,724 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+Initializing gui preferences from file  /home/de/desa9341/.synopsys_dv_prefs.tcl
+set search_path {/export/apps/toshiba/sjsu/synopsys/tc240c/}
+/export/apps/toshiba/sjsu/synopsys/tc240c/
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Warning: Function '=' leaked 1 allocations for 16 bytes. (EQN-21)
+1
+read_verilog ./kse.v 
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/de/desa9341/Project/271/kse.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/de/desa9341/Project/271/kse.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/home/de/desa9341/Project/271/KSE.db:KSE'
+Loaded 1 design.
+Current design is 'KSE'.
+KSE
+analyze  -format verilog {./kse.v}
+Running PRESTO HDLC
+Compiling source file ./kse.v
+Presto compilation completed successfully.
+1
+elaborate  KSE
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: Design 'KSE' was renamed to 'KSE_1' to avoid
+	a conflict with another design that has the same name but
+different parameters. (LINK-17)
+Elaborated 1 design.
+Current design is now 'KSE_1'.
+Information: Building the design 'keypad'. (HDL-193)
+Warning:  ./keypad.v:24: 'row' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 28 in file
+	'./keypad.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |     no/auto      |
+|            36            |     no/auto      |
+|            45            |     no/auto      |
+|            54            |     no/auto      |
+|            63            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine keypad line 22 in file
+		'./keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      store_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine keypad line 28 in file
+		'./keypad.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|       col_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|        v_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   next_state_reg    | Flip-flop |   3   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'controller'. (HDL-193)
+
+Statistics for case statements in always block at line 8 in file
+	'./controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 8 in file
+		'./controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wr_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    rd_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      valid_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fifo'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./fifo.v:44: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./fifo.v:71: signed to unsigned assignment occurs. (VER-318)
+$display output: code =????
+$display output: mem[?] =????
+
+Inferred memory devices in process
+	in routine fifo line 20 in file
+		'./fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      code_reg       | Flip-flop |   4   |  N  | N  | N  | N  | N  | N  | N  |
+|     memory_reg      | Flip-flop |  128  |  N  | N  | N  | N  | N  | N  | N  |
+|     counter_reg     | Flip-flop |  32   |  N  | N  | Y  | N  | N  | N  | N  |
+|      full_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      empty_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decoder'. (HDL-193)
+
+Inferred memory devices in process
+	in routine decoder line 12 in file
+		'./decoder.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       BCD_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+current_design KSE
+Current design is 'KSE'.
+{KSE}
+check_design 
+Warning: In design 'controller', port 'full' is not connected to any nets. (LINT-28)
+Warning: In design 'fifo', cell 'C2931' does not drive any nets. (LINT-1)
+Warning: In design 'fifo', cell 'C3739' does not drive any nets. (LINT-1)
+1
+create_clock clock -name clock -period 10
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.1 clock
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_dont_touch_network [all_clocks]
+1
+set_dont_touch_network [all_reg]
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+Warning: Design 'KSE' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: cell 'D/BCD_reg[0]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[1]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[2]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[3]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[4]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[5]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[6]' is of the wrong type. (UID-119)
+Warning: cell 'D/BCD_reg[7]' is of the wrong type. (UID-119)
+Warning: cell 'C/full_reg' is of the wrong type. (UID-119)
+Warning: cell 'C/empty_reg' is of the wrong type. (UID-119)
+Warning: ...186 additional objects are of the wrong type. (UID-119)
+Warning: Ignoring all 196 objects in collection '_sel3' because they are not of type clock, pin, or port. (UID-445)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+0
+set_load 10 [all_clocks]
+1
+set_load 10 [all_clocks]
+1
+set_fix_hold clock
+1
+compile -incremental_mapping
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             | C-2009.06-DWBB_0912 |    *     |
+============================================================================
+
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition WCCOM25 set on design KSE has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'decoder'
+Information: The register 'BCD_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'BCD_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'BCD_reg[5]' is a constant and will be removed. (OPT-1206)
+  Processing 'fifo'
+  Processing 'controller'
+  Processing 'keypad'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'fifo_DW01_inc_0'
+  Mapping 'fifo_DW_cmp_0'
+  Processing 'fifo_DW01_sub_0'
+  Mapping 'fifo_DW_cmp_1'
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'fifo'. (DDB-72)
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting critical implementations
+  Mapping 'fifo_DW01_inc_1'
+  Selecting implementations
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:03    3085.5      4.10     567.6     477.0                                0.00
+    0:00:04    2874.0      0.00       0.0       0.0                               -3.59
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    2874.0      0.00       0.0       0.0                               -3.59
+    0:00:04    2892.0      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+compile -incremental_mapping
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+
+Information: There are 42 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition WCCOM25 set on design KSE has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Implementation Selection
+  ----------------------------------
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Mapping 'fifo_DW01_inc_0'
+  Selecting implementations
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:00    2808.0      0.00       0.0       0.0                                0.00
+    0:00:00    2793.5      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+report -cell
+report_cell
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : KSE
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:54:25 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+A                         keypad                          221.000000
+                                                                    h, n
+B                         controller                      23.000000 h, n
+C                         fifo                            2493.000000
+                                                                    h, n
+D                         decoder                         39.500000 h, n
+U1                        CNIVXL          tc240c          1.000000  
+U2                        CNIVX1          tc240c          1.000000  
+U3                        CNIVX1          tc240c          1.000000  
+U4                        CDLY1XL         tc240c          3.500000  
+U5                        CDLY1XL         tc240c          3.500000  
+U6                        CDLY1XL         tc240c          3.500000  
+U7                        CDLY1XL         tc240c          3.500000  
+--------------------------------------------------------------------------------
+Total 11 cells                                            2793.500000
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_path 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : KSE
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:54:25 2014
+****************************************
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: C/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: C/memory_reg[1][0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  C/counter_reg[0]/CP (CFD2QX1)            0.00       0.00 r
+  C/counter_reg[0]/Q (CFD2QX1)             0.45       0.45 f
+  C/U8/Z (CDLY1XL)                         0.77       1.22 f
+  C/U743/Z (CNR5X1)                        0.44       1.66 r
+  C/U745/Z (COND4CX1)                      0.10       1.76 f
+  C/U746/Z (COR8X1)                        0.41       2.17 f
+  C/U747/Z (COR8X1)                        0.42       2.59 f
+  C/U748/Z (CND2IX1)                       0.09       2.67 r
+  C/U689/Z (CIVX1)                         0.08       2.75 f
+  C/U730/Z (COND1X1)                       1.31       4.06 r
+  C/U687/Z (CIVX1)                         1.29       5.35 f
+  C/U646/Z (CANR2X1)                       0.32       5.68 r
+  C/U645/Z (CIVX1)                         0.19       5.86 f
+  C/U749/Z (COR6X1)                        0.39       6.25 f
+  C/U750/Z (CNR8X1)                        0.47       6.72 r
+  C/U731/Z (CAOR1X2)                       0.36       7.08 r
+  C/U496/Z (COND1XL)                       0.99       8.08 f
+  C/U463/Z (CANR1XL)                       0.68       8.76 r
+  C/U462/Z (COND2X1)                       0.28       9.04 f
+  C/U726/Z (COND4CX1)                      0.17       9.21 r
+  C/U722/Z (COND1X1)                       0.15       9.36 f
+  C/memory_reg[1][0]/D (CFD1XL)            0.00       9.36 f
+  data arrival time                                   9.36
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  C/memory_reg[1][0]/CP (CFD1XL)           0.00       9.90 r
+  library setup time                      -0.48       9.42
+  data required time                                  9.42
+  -----------------------------------------------------------
+  data required time                                  9.42
+  data arrival time                                  -9.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: C/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: C/memory_reg[1][1]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  C/counter_reg[0]/CP (CFD2QX1)            0.00       0.00 r
+  C/counter_reg[0]/Q (CFD2QX1)             0.45       0.45 f
+  C/U8/Z (CDLY1XL)                         0.77       1.22 f
+  C/U743/Z (CNR5X1)                        0.44       1.66 r
+  C/U745/Z (COND4CX1)                      0.10       1.76 f
+  C/U746/Z (COR8X1)                        0.41       2.17 f
+  C/U747/Z (COR8X1)                        0.42       2.59 f
+  C/U748/Z (CND2IX1)                       0.09       2.67 r
+  C/U689/Z (CIVX1)                         0.08       2.75 f
+  C/U730/Z (COND1X1)                       1.31       4.06 r
+  C/U687/Z (CIVX1)                         1.29       5.35 f
+  C/U646/Z (CANR2X1)                       0.32       5.68 r
+  C/U645/Z (CIVX1)                         0.19       5.86 f
+  C/U749/Z (COR6X1)                        0.39       6.25 f
+  C/U750/Z (CNR8X1)                        0.47       6.72 r
+  C/U731/Z (CAOR1X2)                       0.36       7.08 r
+  C/U496/Z (COND1XL)                       0.99       8.08 f
+  C/U463/Z (CANR1XL)                       0.68       8.76 r
+  C/U459/Z (COND2X1)                       0.28       9.04 f
+  C/U458/Z (COND4CX1)                      0.17       9.21 r
+  C/U716/Z (COND1X1)                       0.15       9.36 f
+  C/memory_reg[1][1]/D (CFD1XL)            0.00       9.36 f
+  data arrival time                                   9.36
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  C/memory_reg[1][1]/CP (CFD1XL)           0.00       9.90 r
+  library setup time                      -0.48       9.42
+  data required time                                  9.42
+  -----------------------------------------------------------
+  data required time                                  9.42
+  data arrival time                                  -9.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: C/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: C/memory_reg[1][2]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  C/counter_reg[0]/CP (CFD2QX1)            0.00       0.00 r
+  C/counter_reg[0]/Q (CFD2QX1)             0.45       0.45 f
+  C/U8/Z (CDLY1XL)                         0.77       1.22 f
+  C/U743/Z (CNR5X1)                        0.44       1.66 r
+  C/U745/Z (COND4CX1)                      0.10       1.76 f
+  C/U746/Z (COR8X1)                        0.41       2.17 f
+  C/U747/Z (COR8X1)                        0.42       2.59 f
+  C/U748/Z (CND2IX1)                       0.09       2.67 r
+  C/U689/Z (CIVX1)                         0.08       2.75 f
+  C/U730/Z (COND1X1)                       1.31       4.06 r
+  C/U687/Z (CIVX1)                         1.29       5.35 f
+  C/U646/Z (CANR2X1)                       0.32       5.68 r
+  C/U645/Z (CIVX1)                         0.19       5.86 f
+  C/U749/Z (COR6X1)                        0.39       6.25 f
+  C/U750/Z (CNR8X1)                        0.47       6.72 r
+  C/U731/Z (CAOR1X2)                       0.36       7.08 r
+  C/U496/Z (COND1XL)                       0.99       8.08 f
+  C/U463/Z (CANR1XL)                       0.68       8.76 r
+  C/U456/Z (COND2X1)                       0.28       9.04 f
+  C/U455/Z (COND4CX1)                      0.17       9.21 r
+  C/U711/Z (COND1X1)                       0.15       9.36 f
+  C/memory_reg[1][2]/D (CFD1XL)            0.00       9.36 f
+  data arrival time                                   9.36
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  C/memory_reg[1][2]/CP (CFD1XL)           0.00       9.90 r
+  library setup time                      -0.48       9.42
+  data required time                                  9.42
+  -----------------------------------------------------------
+  data required time                                  9.42
+  data arrival time                                  -9.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: C/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: C/memory_reg[1][3]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  C/counter_reg[0]/CP (CFD2QX1)            0.00       0.00 r
+  C/counter_reg[0]/Q (CFD2QX1)             0.45       0.45 f
+  C/U8/Z (CDLY1XL)                         0.77       1.22 f
+  C/U743/Z (CNR5X1)                        0.44       1.66 r
+  C/U745/Z (COND4CX1)                      0.10       1.76 f
+  C/U746/Z (COR8X1)                        0.41       2.17 f
+  C/U747/Z (COR8X1)                        0.42       2.59 f
+  C/U748/Z (CND2IX1)                       0.09       2.67 r
+  C/U689/Z (CIVX1)                         0.08       2.75 f
+  C/U730/Z (COND1X1)                       1.31       4.06 r
+  C/U687/Z (CIVX1)                         1.29       5.35 f
+  C/U646/Z (CANR2X1)                       0.32       5.68 r
+  C/U645/Z (CIVX1)                         0.19       5.86 f
+  C/U749/Z (COR6X1)                        0.39       6.25 f
+  C/U750/Z (CNR8X1)                        0.47       6.72 r
+  C/U731/Z (CAOR1X2)                       0.36       7.08 r
+  C/U496/Z (COND1XL)                       0.99       8.08 f
+  C/U463/Z (CANR1XL)                       0.68       8.76 r
+  C/U453/Z (COND2X1)                       0.28       9.04 f
+  C/U452/Z (COND4CX1)                      0.17       9.21 r
+  C/U706/Z (COND1X1)                       0.15       9.36 f
+  C/memory_reg[1][3]/D (CFD1XL)            0.00       9.36 f
+  data arrival time                                   9.36
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  C/memory_reg[1][3]/CP (CFD1XL)           0.00       9.90 r
+  library setup time                      -0.48       9.42
+  data required time                                  9.42
+  -----------------------------------------------------------
+  data required time                                  9.42
+  data arrival time                                  -9.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+  Startpoint: C/counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: C/memory_reg[2][0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  C/counter_reg[0]/CP (CFD2QX1)            0.00       0.00 r
+  C/counter_reg[0]/Q (CFD2QX1)             0.45       0.45 f
+  C/U8/Z (CDLY1XL)                         0.77       1.22 f
+  C/U743/Z (CNR5X1)                        0.44       1.66 r
+  C/U745/Z (COND4CX1)                      0.10       1.76 f
+  C/U746/Z (COR8X1)                        0.41       2.17 f
+  C/U747/Z (COR8X1)                        0.42       2.59 f
+  C/U748/Z (CND2IX1)                       0.09       2.67 r
+  C/U689/Z (CIVX1)                         0.08       2.75 f
+  C/U730/Z (COND1X1)                       1.31       4.06 r
+  C/U687/Z (CIVX1)                         1.29       5.35 f
+  C/U646/Z (CANR2X1)                       0.32       5.68 r
+  C/U645/Z (CIVX1)                         0.19       5.86 f
+  C/U749/Z (COR6X1)                        0.39       6.25 f
+  C/U750/Z (CNR8X1)                        0.47       6.72 r
+  C/U731/Z (CAOR1X2)                       0.36       7.08 r
+  C/U496/Z (COND1XL)                       0.99       8.08 f
+  C/U447/Z (CANR1XL)                       0.68       8.76 r
+  C/U446/Z (COND2X1)                       0.28       9.04 f
+  C/U445/Z (COND4CX1)                      0.17       9.21 r
+  C/U359/Z (COND1X1)                       0.15       9.36 f
+  C/memory_reg[2][0]/D (CFD1XL)            0.00       9.36 f
+  data arrival time                                   9.36
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.10       9.90
+  C/memory_reg[2][0]/CP (CFD1XL)           0.00       9.90 r
+  library setup time                      -0.48       9.42
+  data required time                                  9.42
+  -----------------------------------------------------------
+  data required time                                  9.42
+  data arrival time                                  -9.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+1
+set_max_area 5000
+1
+report_area 
+ 
+****************************************
+Report : area
+Design : KSE
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:54:25 2014
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               20
+Number of nets:                40
+Number of cells:               11
+Number of references:           7
+
+Combinational area:       1913.000000
+Noncombinational area:     880.500000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          2793.500000
+Total area:                 undefined
+1
+report_power
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : KSE
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:54:26 2014
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   3.9705 mW   (96%)
+  Net Switching Power  = 152.7311 uW    (4%)
+                         ---------
+Total Dynamic Power    =   4.1232 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+1
+write -hierarchy -format verilog -output kse_netlist.v
+Writing verilog file '/home/de/desa9341/Project/271/kse_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 3 nets to module KSE using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...

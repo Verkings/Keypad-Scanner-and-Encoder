@@ -1,0 +1,505 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+Initializing gui preferences from file  /home/de/desa9341/.synopsys_dv_prefs.tcl
+set search_path {/export/apps/toshiba/sjsu/synopsys/tc240c/}
+/export/apps/toshiba/sjsu/synopsys/tc240c/
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Warning: Function '=' leaked 1 allocations for 16 bytes. (EQN-21)
+1
+read_verilog ./controller.v 
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/de/desa9341/Project/271/controller.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/de/desa9341/Project/271/controller.v
+
+Statistics for case statements in always block at line 8 in file
+	'/home/de/desa9341/Project/271/controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 8 in file
+		'/home/de/desa9341/Project/271/controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wr_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    rd_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      valid_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/de/desa9341/Project/271/controller.db:controller'
+Loaded 1 design.
+Current design is 'controller'.
+controller
+analyze  -format verilog {./controller.v}
+Running PRESTO HDLC
+Compiling source file ./controller.v
+Presto compilation completed successfully.
+1
+elaborate  controller
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 8 in file
+	'./controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 8 in file
+		'./controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wr_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    rd_enable_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      valid_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/de/desa9341/Project/271/controller.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'controller'.
+1
+current_design controller
+Current design is 'controller'.
+{controller}
+check_design 
+Warning: In design 'controller', port 'full' is not connected to any nets. (LINT-28)
+1
+create_clock clock -name clock -period 1.5
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clock
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_dont_touch_network [all_clocks]
+1
+set_load 10 [all_inputs]
+1
+set_load 10 [all_outputs]
+1
+set_fix_hold clock
+1
+compile -incremental_mapping
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             | C-2009.06-DWBB_0912 |          |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition WCCOM25 set on design controller has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'controller'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      49.5      0.00       0.0       0.0                                0.00
+    0:00:01      45.0      0.00       0.0       0.0                               -1.35
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01      45.0      0.00       0.0       0.0                               -1.35
+    0:00:01      53.0      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+report -cell
+report_cell
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : controller
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:01:59 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+C10                       COR2X1          tc240c          1.500000  
+C11                       COR2X1          tc240c          1.500000  
+C19                       COR2X1          tc240c          1.500000  
+C20                       COR2X1          tc240c          1.500000  
+C24                       COR2X1          tc240c          1.500000  
+C25                       COR2X1          tc240c          1.500000  
+C29                       COR2X1          tc240c          1.500000  
+C30                       COR2X1          tc240c          1.500000  
+C32                       CAN2X2          tc240c          2.000000  
+C70                       COR3X1          tc240c          2.000000  
+C77                       COR3X1          tc240c          2.000000  
+I_1                       CIVX2           tc240c          1.000000  
+I_2                       CIVX2           tc240c          1.000000  
+I_3                       CIVX2           tc240c          1.000000  
+I_4                       CIVX2           tc240c          1.000000  
+I_5                       CIVX2           tc240c          1.000000  
+I_6                       CIVX2           tc240c          1.000000  
+I_7                       CIVX2           tc240c          1.000000  
+U3                        CAN2X4          tc240c          2.500000  
+U4                        CDLY1XL         tc240c          3.500000  
+U5                        CNIVX1          tc240c          1.000000  
+U6                        CNIVXL          tc240c          1.000000  
+U7                        CAN2X1          tc240c          1.500000  
+U8                        CIVX3           tc240c          1.500000  
+U9                        CIVX1           tc240c          1.000000  
+U10                       CAN2XL          tc240c          1.500000  
+rd_enable_reg             CFD2QXL         tc240c          5.000000  n
+valid_reg                 CFD4QXL         tc240c          4.500000  n
+wr_enable_reg             CFD2QXL         tc240c          5.000000  n
+--------------------------------------------------------------------------------
+Total 29 cells                                            53.000000
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_path 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : controller
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:01:59 2014
+****************************************
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: v (input port)
+  Endpoint: valid_reg (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 f
+  v (in)                                   0.00       0.00 f
+  I_3/Z (CIVX2)                            0.06       0.06 r
+  C19/Z (COR2X1)                           0.16       0.22 r
+  C20/Z (COR2X1)                           0.17       0.39 r
+  I_4/Z (CIVX2)                            0.06       0.45 f
+  C77/Z (COR3X1)                           0.38       0.83 f
+  valid_reg/D (CFD4QXL)                    0.00       0.83 f
+  data arrival time                                   0.83
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  valid_reg/CP (CFD4QXL)                   0.00       1.25 r
+  library setup time                      -0.41       0.84
+  data required time                                  0.84
+  -----------------------------------------------------------
+  data required time                                  0.84
+  data arrival time                                  -0.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: empty (input port)
+  Endpoint: rd_enable_reg
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 f
+  empty (in)                               0.00       0.00 f
+  U9/Z (CIVX1)                             0.09       0.09 r
+  U8/Z (CIVX3)                             0.10       0.19 f
+  U7/Z (CAN2X1)                            0.17       0.36 f
+  U6/Z (CNIVXL)                            0.18       0.53 f
+  C70/Z (COR3X1)                           0.31       0.84 f
+  rd_enable_reg/D (CFD2QXL)                0.00       0.84 f
+  data arrival time                                   0.84
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  rd_enable_reg/CP (CFD2QXL)               0.00       1.25 r
+  library setup time                      -0.37       0.88
+  data required time                                  0.88
+  -----------------------------------------------------------
+  data required time                                  0.88
+  data arrival time                                  -0.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: v (input port)
+  Endpoint: wr_enable_reg
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock (input port clock) (rise edge)     0.00       0.00
+  input external delay                     0.00       0.00 f
+  v (in)                                   0.00       0.00 f
+  U4/Z (CDLY1XL)                           0.64       0.64 f
+  U5/Z (CNIVX1)                            0.13       0.77 f
+  wr_enable_reg/D (CFD2QXL)                0.00       0.77 f
+  data arrival time                                   0.77
+
+  clock clock (rise edge)                  1.50       1.50
+  clock network delay (propagated)         0.00       1.50
+  clock uncertainty                       -0.25       1.25
+  wr_enable_reg/CP (CFD2QXL)               0.00       1.25 r
+  library setup time                      -0.37       0.88
+  data required time                                  0.88
+  -----------------------------------------------------------
+  data required time                                  0.88
+  data arrival time                                  -0.77
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+1
+set_max_area 5000
+1
+report_area 
+ 
+****************************************
+Report : area
+Design : controller
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:01:59 2014
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:                9
+Number of nets:                34
+Number of cells:               29
+Number of references:          14
+
+Combinational area:         38.500000
+Noncombinational area:      14.500000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:            53.000000
+Total area:                 undefined
+1
+report_power 
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : controller
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:02:00 2014
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  = 645.8100 uW   (92%)
+  Net Switching Power  =  53.6974 uW    (8%)
+                         ---------
+Total Dynamic Power    = 699.5073 uW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+1
+write -hierarchy -format verilog -output controller_netlist.v
+Writing verilog file '/home/de/desa9341/Project/271/controller_netlist.v'.
+1
+report_qor 
+ 
+****************************************
+Report : qor
+Design : controller
+Version: C-2009.06-SP5
+Date   : Wed Jul  2 07:02:00 2014
+****************************************
+
+
+  Timing Path Group 'clock'
+  -----------------------------------
+  Levels of Logic:               5.00
+  Critical Path Length:          0.83
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      1.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                 29
+  Buf/Inv Cell Count:              12
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:       38.500000
+  Noncombinational Area:    14.500000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:                53.000000
+  Design Area:              53.000000
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            34
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: eecad4.engr.sjsu.edu
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              0.00
+  Logic Optimization:            0.03
+  Mapping Optimization:          0.11
+  -----------------------------------
+  Overall Compile Time:          1.59
+
+1
+quit
+
+Thank you...

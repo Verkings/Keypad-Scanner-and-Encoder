@@ -1,0 +1,39 @@
+set search_path {/export/apps/toshiba/sjsu/synopsys/tc240c/}
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+set synthetic_library {dw_foundation.sldb standard.sldb}
+
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+
+read_verilog ./kse.v 
+analyze  -format verilog {./kse.v}
+elaborate  KSE
+
+current_design KSE
+check_design 
+create_clock clock -name clock -period 10
+set_propagated_clock clock
+set_clock_uncertainty 0.1 clock
+set_propagated_clock clock
+set_dont_touch_network [all_clocks]
+set_dont_touch_network [all_reg]
+
+set_load 10 [all_clocks]
+set_load 10 [all_clocks]
+
+
+ 
+set_fix_hold clock
+compile -incremental_mapping
+compile -incremental_mapping
+report -cell
+update_timing
+report_timing -max_path 5
+set_max_area 5000
+report_area 
+report_power
+
+write -hierarchy -format verilog -output KSE_netlist.v
+
+quit
